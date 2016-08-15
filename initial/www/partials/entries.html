@@ -1,0 +1,15 @@
+<!-- Defines this as a view -->
+<ion-view>
+  <!-- Defines title for the view -->
+  <ion-nav-title>{{title}}</ion-nav-title>
+  <!-- Defines content area with padding -->
+  <ion-content class="padding">
+    <!-- Defines list of content -->
+    <ion-list>
+      <ion-item ng-repeat="entry in entries"
+                href="#/entry/{{$index}}">
+        {{entry.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
