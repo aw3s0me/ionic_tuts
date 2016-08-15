@@ -15,7 +15,7 @@ angular.module('starter', ['ionic', 'rssappControllers','rssappServices','rssapp
       .state('Entries', {
         url: '/',
         controller: 'EntriesCtrl',
-        templateUrl: 'partials/entry.html'
+        templateUrl: 'partials/entries.html'
       })
       // Defines view for individual entry
       .state('Entry', {
