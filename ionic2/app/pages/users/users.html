@@ -17,5 +17,17 @@
 
 
 <ion-content padding>
-  <h3>Users view page</h3>
+  <!-- use ion-list to render lists -->
+  <ion-list>
+    <!-- items in the list have an ion-item directive which will loop through *ngFor -->
+    <button ion-item *ngFor="let user of users">
+      <ion-avatar item-left>
+        <!-- use property binding to load avatar within ion-avatar -->
+        <img [src]="user.avatar_url" />
+      </ion-avatar>
+      <h2>{{ user.login }}</h2>
+      <!-- Loading icon -->
+      <ion-icon ios="ios-arrow-forward" md="md-arrow-forward" item-right ></ion-icon>
+    </button>
+  </ion-list>
 </ion-content>
