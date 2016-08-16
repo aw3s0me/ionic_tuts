@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import {GithubUsers} from '../../providers/github-users/github-users';
 import {User} from "../../models/user";
+import {UserDetailsPage} from "../user-details/user-details";
 /*
   Generated class for the UsersPage page.
 
@@ -25,5 +26,16 @@ export class UsersPage {
     githubUsers
       .load()
       .then((users) => this.users = users);
+  }
+
+  /**
+   * Going to user details
+   * @param event
+   * @param login #username
+     */
+  goToDetails(event, login) {
+    this.navCtrl.push(UserDetailsPage, {
+      login: login
+    });
   }
 }

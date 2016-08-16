@@ -20,7 +20,8 @@
   <!-- use ion-list to render lists -->
   <ion-list>
     <!-- items in the list have an ion-item directive which will loop through *ngFor -->
-    <button ion-item *ngFor="let user of users">
+    <button ion-item *ngFor="let user of users"
+            (click)="goToDetails($event, user.login)">
       <ion-avatar item-left>
         <!-- use property binding to load avatar within ion-avatar -->
         <img [src]="user.avatar_url" />
