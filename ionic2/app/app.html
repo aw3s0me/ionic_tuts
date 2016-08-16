@@ -8,6 +8,7 @@
 
   <ion-content>
     <ion-list>
+      <!-- Loop through pages collection and generate a template for each item -->
       <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
@@ -16,4 +17,6 @@
 
 </ion-menu>
 
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<!-- Where the page navigated to is displayed -->
+<!-- Root property is bound to rootPage in the page class -->
+<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
